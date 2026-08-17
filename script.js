@@ -147,12 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setTheme(theme) {
+        const currentY = window.scrollY;
         html.setAttribute('data-theme', theme);
         localStorage.setItem('portfolio-theme', theme);
         themeBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.theme === theme);
         });
         updateParticles(theme);
+        window.scrollTo({ top: currentY, behavior: 'instant' });
     }
 
     function initTheme() {
@@ -161,7 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     themeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             setTheme(btn.dataset.theme);
         });
     });
@@ -475,8 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateInputWidth();
 
         // Focus input on click
-        terminalInput.addEventListener('click', () => {
-            terminalInput.focus();
+        terminalInput.addEventListener('click', (e) => {
+            e.stopPropagation();
+            terminalInput.focus({ preventScroll: true });
         });
 
         // Focus input when clicking anywhere in terminal
@@ -484,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (terminalBody) {
             terminalBody.addEventListener('click', (e) => {
                 if (e.target === terminalBody || e.target.closest('.dev-terminal-output') || e.target.closest('.input-wrap') || e.target.closest('.input-line')) {
-                    terminalInput.focus();
+                    terminalInput.focus({ preventScroll: true });
                 }
             });
         }
