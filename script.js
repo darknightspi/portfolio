@@ -1,81 +1,8 @@
 /* =============================================
-   PORTFOLIO SCRIPT — MODERN EDITION
+   PORTFOLIO SCRIPT — CLEAN LIGHT EDITION
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ─── Particles ──────────────────────────────
-    if (window.particlesJS) {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 60, density: { enable: true, value_area: 900 } },
-                color: { value: ['#63b3ed', '#b794f4', '#76e4f7'] },
-                shape: { type: 'circle' },
-                opacity: {
-                    value: 0.45,
-                    random: true,
-                    anim: { enable: true, speed: 0.8, opacity_min: 0.05, sync: false }
-                },
-                size: {
-                    value: 2.5,
-                    random: true,
-                    anim: { enable: false }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 140,
-                    color: '#63b3ed',
-                    opacity: 0.12,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1.2,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: true, mode: 'grab' },
-                    onclick: { enable: true, mode: 'push' },
-                    resize: true
-                },
-                modes: {
-                    grab: { distance: 160, line_linked: { opacity: 0.5 } },
-                    push: { particles_nb: 3 }
-                }
-            },
-            retina_detect: true
-        });
-    }
-
-    // ─── Custom Cursor ───────────────────────────
-    const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-    let mouseX = 0, mouseY = 0;
-    let followerX = 0, followerY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top  = mouseY + 'px';
-    });
-
-    // Smooth follower with lerp
-    function animateCursor() {
-        followerX += (mouseX - followerX) * 0.12;
-        followerY += (mouseY - followerY) * 0.12;
-        follower.style.left = followerX + 'px';
-        follower.style.top  = followerY + 'px';
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
 
     // ─── Navbar Scroll State ─────────────────────
     const navbar = document.getElementById('navbar');
@@ -175,13 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ─── Stagger reveal delay for project cards ──
+    // ─── Stagger reveal delay for cards ──
     document.querySelectorAll('.projects-grid .project-card').forEach((card, i) => {
-        card.style.transitionDelay = `${i * 0.1}s`;
+        card.style.transitionDelay = `${i * 0.08}s`;
     });
 
     document.querySelectorAll('.bento-card').forEach((card, i) => {
-        card.style.transitionDelay = `${i * 0.08}s`;
+        card.style.transitionDelay = `${i * 0.06}s`;
+    });
+
+    document.querySelectorAll('.timeline .tl-item').forEach((item, i) => {
+        item.style.transitionDelay = `${i * 0.1}s`;
     });
 
 });
