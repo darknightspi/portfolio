@@ -1,579 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramesh Rathod — ML & Systems Engineer</title>
-    <meta name="description" content="Portfolio of Ramesh Rathod — Computer Engineering student building intelligent systems with ML, IoT, and Cybersecurity.">
+    <title>Ramesh Rathod | Machine Learning & Data Science Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Ramesh Rathod — Computer Engineering student (2027) focused on Machine Learning, Data Science, and AI. Building practical ML systems, IoT applications, and full-stack projects. Open to internships.">
+    <meta name="keywords"
+        content="Machine Learning, Data Science, AI, Computer Engineering, Python, Flask, IoT, Android, Portfolio">
+    <meta property="og:title" content="Ramesh Rathod | Machine Learning & Data Science Portfolio">
+    <meta property="og:description"
+        content="Computer Engineering student building practical ML and Data Science systems. Open to internships.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darknightspi.github.io/portfolio/">
+    <meta property="og:image" content="https://darknightspi.github.io/portfolio/assets/krishimind.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ramesh Rathod | Machine Learning & Data Science Portfolio">
+    <meta name="twitter:description"
+        content="Computer Engineering student building practical ML and Data Science systems. Open to internships.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-    <div class="nav-inner">
-        <a href="#hero" class="nav-logo">
-            <span class="logo-bracket"><</span>RR<span class="logo-bracket">/></span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            <li><a href="assets/Ramesh_Rathod.pdf" class="nav-link" download>CV/Resume</a></li>
-        </ul>
-        <a href="mailto:iamrameshrathod01@gmail.com" class="nav-cta">Hire Me</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a href="assets/Ramesh_Rathod.pdf" download>CV/Resume</a>
-    </div>
-</nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">
+                    << /span>RR<span class="logo-bracket">/></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-switcher" id="theme-switcher" role="group" aria-label="Theme selection">
+                <button class="theme-btn" data-theme="light" aria-label="Light Mode" title="Light Mode">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                </button>
+                <button class="theme-btn" data-theme="dark" aria-label="Dark Mode" title="Dark Mode">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="theme-btn" data-theme="developer" aria-label="Developer Mode" title="Developer Mode">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 18 2 12 8 6" />
+                    </svg>
+                </button>
+            </div>
+            <a href="mailto:iamrameshrathod01@gmail.com" class="nav-cta">Hire Me</a>
+            <a href="assets/Ramesh_Rathod.pdf" class="nav-cta nav-resume" download>CV/Resume</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/Ramesh_Rathod.pdf" download>CV/Resume</a>
+        </div>
+    </nav>
 
-<!-- ===== HERO ===== -->
-<header id="hero" class="hero-section">
-    <div class="hero-content reveal">
-        <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Open to Opportunities
-        </div>
-        <h1 class="hero-title">
-            Ramesh<br>
-            <span class="gradient-text">Rathod</span>
-        </h1>
-        <p class="hero-tagline">Building intelligent systems that solve real-world problems</p>
-        <p class="hero-sub">Computer Engineering student focused on Machine Learning, IoT, and impactful tech solutions.</p>
-        <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-            <a href="assets/Ramesh_Rathod.pdf" class="btn btn-ghost" download>Download CV/Resume</a>
-        </div>
-        <div class="hero-pills">
-            <span class="pill">Machine Learning</span>
-            <span class="pill">Cybersecurity</span>
-            <span class="pill">IoT</span>
-            <span class="pill">Android Dev</span>
-        </div>
-    </div>
-    <div class="hero-visual reveal-right">
-        <div class="hero-card-stack">
-            <div class="floating-card card-1">
-                <div class="fc-icon">🤖</div>
-                <div>
-                    <div class="fc-label">ML Systems</div>
-                    <div class="fc-val">Active</div>
-                </div>
+    <!-- ===== HERO ===== -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content reveal">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open to Internships
             </div>
-            <div class="floating-card card-2">
-                <div class="fc-icon">🔒</div>
-                <div>
-                    <div class="fc-label">Cybersecurity</div>
-                    <div class="fc-val">Learning</div>
-                </div>
+            <h1 class="hero-title">
+                Ramesh<br>
+                <span class="gradient-text">Rathod</span>
+            </h1>
+            <p class="hero-tagline">Machine Learning & Data Science Enthusiast | Computer Engineering Student</p>
+            <p class="hero-sub">Building intelligent systems with data and code.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="assets/Ramesh_Rathod.pdf" class="btn btn-ghost" download>Download Resume</a>
             </div>
-            <div class="floating-card card-3">
-                <div class="fc-icon">📡</div>
-                <div>
-                    <div class="fc-label">IoT Projects</div>
-                    <div class="fc-val">3 Built</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section about-section">
-    <div class="container">
-        <div class="section-label reveal">01 — About</div>
-        <div class="about-grid">
-            <div class="about-text reveal">
-                <h2 class="section-heading">I engineer systems,<br><span class="gradient-text">not just code.</span></h2>
-                <p>I'm a highly motivated Computer Engineering student dedicated to bridging the gap between theoretical computing and real-world impact. I specialize in <strong>Machine Learning, Cybersecurity, and IoT systems</strong> — building from the ground up.</p>
-                <p>My builder mindset pushes me to transform raw data and logic into solutions that matter. Whether it's a cloud-synced Android app or an AI agriculture platform, I obsess over the craft.</p>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <span class="hi-num">4+</span>
-                        <span class="hi-label">Projects Shipped</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="hi-num">3</span>
-                        <span class="hi-label">Tech Domains</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="hi-num">🥈</span>
-                        <span class="hi-label">PBL Runner-Up</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-card-col reveal-right">
-                <div class="card glass-card">
-                    <h3>Currently</h3>
-                    <div class="info-rows">
-                        <div class="info-row">
-                            <span class="ir-label">📚 Degree</span>
-                            <span class="ir-val">Computer Engineering</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="ir-label">🔬 Research</span>
-                            <span class="ir-val">E-Cell Researcher</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="ir-label">🎯 Focus</span>
-                            <span class="ir-val">ML & Cybersecurity</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="ir-label">📍 Status</span>
-                            <span class="ir-val status-open">Open to Work</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-pills">
+                <span class="pill primary">Machine Learning</span>
+                <span class="pill primary">Data Science</span>
+                <span class="pill primary">AI</span>
+                <span class="pill secondary">IoT</span>
+                <span class="pill secondary">Cloud</span>
+                <span class="pill secondary">Software Dev</span>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="section skills-section">
-    <div class="container">
-        <div class="section-label reveal">02 — Skills</div>
-        <h2 class="section-heading reveal">Technical <span class="gradient-text">Arsenal</span></h2>
-        <div class="bento-grid reveal">
-            <div class="bento-card bento-large card">
-                <div class="bento-icon">
-                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M8 3L3 12l5 9M16 3l5 9-5 9M14 5l-4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag primary">Python</span>
-                    <span class="skill-tag primary">Java</span>
-                    <span class="skill-tag primary">C++</span>
-                </div>
-                <div class="skill-bars">
-                    <div class="sbar-row">
-                        <span>Python</span>
-                        <div class="sbar"><div class="sbar-fill" data-w="85"></div></div>
-                    </div>
-                    <div class="sbar-row">
-                        <span>Java</span>
-                        <div class="sbar"><div class="sbar-fill" data-w="80"></div></div>
-                    </div>
-                    <div class="sbar-row">
-                        <span>C++</span>
-                        <div class="sbar"><div class="sbar-fill" data-w="70"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-card card">
-                <div class="bento-icon">
-                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.8"/></svg>
-                </div>
-                <h3>Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Android Studio</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">IoT Systems</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">MongoDB</span>
-                </div>
-            </div>
-
-            <div class="bento-card card">
-                <div class="bento-icon">
-                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v9l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Domains</h3>
-                <div class="domain-pills">
-                    <div class="domain-pill">
-                        <span class="dp-icon">🧠</span>
-                        <span>Machine Learning</span>
-                    </div>
-                    <div class="domain-pill">
-                        <span class="dp-icon">🔒</span>
-                        <span>Cybersecurity</span>
-                    </div>
-                    <div class="domain-pill">
-                        <span class="dp-icon">📊</span>
-                        <span>Data Science</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-card bento-wide card">
-                <div class="bento-icon">
-                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Core CS Concepts</h3>
-                <div class="concept-grid">
-                    <div class="concept-chip">Data Structures & Algorithms</div>
-                    <div class="concept-chip">Object-Oriented Programming</div>
-                    <div class="concept-chip">System Design</div>
-                    <div class="concept-chip">RESTful APIs</div>
-                    <div class="concept-chip">Database Design</div>
-                    <div class="concept-chip">Cloud Architecture</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="section projects-section">
-    <div class="container">
-        <div class="section-label reveal">03 — Projects</div>
-        <h2 class="section-heading reveal">Things I've <span class="gradient-text">Built</span></h2>
-        <div class="projects-grid">
-
-            <div class="project-card card reveal">
-                <div class="pc-img">
-                    <img src="assets/krishimind.png" alt="AgroDiamond">
-                    <div class="pc-number">01</div>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-tags">
-                        <span class="pc-tag">React</span>
-                        <span class="pc-tag">TypeScript</span>
-                        <span class="pc-tag">Vite</span>
-                        <span class="pc-tag">Tailwind</span>
-                    </div>
-                    <h3 class="pc-title">AgroDiamond</h3>
-                    <p class="pc-desc">AI-powered agriculture intelligence platform delivering precision farming insights. Helps farmers make data-driven decisions to maximize yield and minimize resource waste.</p>
-                    <div class="pc-footer">
-                        <a href="https://github.com/darknightspi/AgroDiamond" target="_blank" class="pc-link">
-                            View on GitHub
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card card reveal">
-                <div class="pc-img">
-                    <img src="assets/event_registration.png" alt="Event Registration System">
-                    <div class="pc-number">02</div>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-tags">
-                        <span class="pc-tag">Node.js</span>
-                        <span class="pc-tag">Express</span>
-                        <span class="pc-tag">MongoDB</span>
-                        <span class="pc-tag">Mongoose</span>
-                    </div>
-                    <h3 class="pc-title">Event Registration System</h3>
-                    <p class="pc-desc">Full-featured RESTful backend for managing college events, participants, and registrations with capacity enforcement, duplicate prevention, and complete CRUD operations.</p>
-                    <div class="pc-footer">
-                        <a href="https://github.com/darknightspi/Event-Registration-System" target="_blank" class="pc-link">
-                            View on GitHub
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card card reveal">
-                <div class="pc-img">
-                    <img src="assets/edupulse.png" alt="Library Equipment Management">
-                    <div class="pc-number">03</div>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-tags">
-                        <span class="pc-tag">Java</span>
-                        <span class="pc-tag">Android</span>
-                        <span class="pc-tag">Firebase</span>
-                    </div>
-                    <h3 class="pc-title">Library Equipment Management</h3>
-                    <p class="pc-desc">Cloud-synced Android app for institutional equipment tracking. Real-time Firestore database gives admins instant statistics on device availability and working status.</p>
-                    <div class="pc-footer">
-                        <a href="https://github.com/darknightspi/LibraryEquipmentManagement" target="_blank" class="pc-link">
-                            View on GitHub
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card card reveal">
-                <div class="pc-img">
-                    <img src="assets/health_device.png" alt="EduPulse">
-                    <div class="pc-number">04</div>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-tags">
-                        <span class="pc-tag">DSA</span>
-                        <span class="pc-tag">Algorithms</span>
-                        <span class="pc-tag">System Design</span>
-                    </div>
-                    <h3 class="pc-title">EduPulse</h3>
-                    <p class="pc-desc">Data structures-driven academic platform demonstrating how rigorous algorithm design and efficient system architecture underpin robust, production-ready educational software.</p>
-                    <div class="pc-footer">
-                        <a href="https://github.com/darknightspi/EduPulse" target="_blank" class="pc-link">
-                            View on GitHub
-                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="section experience-section">
-    <div class="container">
-        <div class="section-label reveal">04 — Experience</div>
-        <h2 class="section-heading reveal">What I've <span class="gradient-text">Done</span></h2>
-
-        <div class="internship-card card reveal">
-            <div class="intern-header">
-                <div class="intern-org-badge">
-                    <div class="intern-org-icon">💼</div>
+        <div class="hero-visual reveal-right">
+            <div class="hero-card-stack hero-cards-lightdark" id="hero-cards-light">
+                <div class="floating-card card-1">
+                    <div class="fc-icon">🤖</div>
                     <div>
-                        <div class="intern-org-name">NetLeap IT Training And Solutions</div>
-                        <div class="intern-org-type">IT Training & Solutions · Nashik, Maharashtra</div>
+                        <div class="fc-label">Machine Learning & Data Science</div>
+                        <div class="fc-val">Primary Focus</div>
                     </div>
                 </div>
-                <div class="intern-meta">
-                    <span class="intern-badge">Data Science</span>
-                    <span class="intern-duration">
-                        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                        Dec 2024 – Feb 2025 · 3 Months
-                    </span>
-                    <span class="intern-location">
-                        <svg width="13" height="13" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
-                        On-site
-                    </span>
-                </div>
-            </div>
-
-            <div class="intern-role">
-                <h3>Data Science Intern</h3>
-                <p class="intern-summary">Completed an intensive 45-day, on-site Data Science and Machine Learning internship — architecting a full-stack prediction system from raw EDA through model selection, evaluation, and Flask deployment.</p>
-            </div>
-
-            <div class="project-spotlight">
-                <div class="ps-label">Key Project</div>
-                <div class="ps-title">EduPulse — Student Performance Prediction System</div>
-                <div class="ps-metric">
-                    <span class="metric-block">
-                        <span class="m-val">~0.78</span>
-                        <span class="m-label">R² Score</span>
-                    </span>
-                    <span class="metric-block">
-                        <span class="m-val">3</span>
-                        <span class="m-label">Models Compared</span>
-                    </span>
-                    <span class="metric-block">
-                        <span class="m-val">E2E</span>
-                        <span class="m-label">Flask Deployed</span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="intern-contributions">
-                <div class="ic-col">
-                    <ul class="intern-bullets">
-                        <li>
-                            <span class="ib-dot"></span>
-                            Conducted full-scale <strong>Exploratory Data Analysis (EDA)</strong> to surface key academic and behavioral factors driving student performance — identifying critical predictors for model selection.
-                        </li>
-                        <li>
-                            <span class="ib-dot"></span>
-                            Implemented and benchmarked three regression models — <strong>Linear Regression, Decision Tree Regressor, and Random Forest Regressor</strong> — evaluating each against R², MAE, and RMSE metrics.
-                        </li>
-                        <li>
-                            <span class="ib-dot"></span>
-                            Achieved best predictive performance with <strong>Decision Tree Regressor (R² ≈ 0.78)</strong> through systematic feature engineering, pruning, and hyperparameter optimization.
-                        </li>
-                    </ul>
-                </div>
-                <div class="ic-col">
-                    <ul class="intern-bullets">
-                        <li>
-                            <span class="ib-dot"></span>
-                            Designed and deployed a <strong>Flask-based web application</strong> serving real-time student grade predictions via a clean REST interface — integrating the trained model as a production backend.
-                        </li>
-                        <li>
-                            <span class="ib-dot"></span>
-                            Managed source code, versioning, and project milestones using <strong>GitHub</strong> — maintaining a structured commit history and clean repository documentation.
-                        </li>
-                        <li>
-                            <span class="ib-dot"></span>
-                            Applied end-to-end ML lifecycle concepts: <strong>data preprocessing, model evaluation, cross-validation, and backend integration</strong> — delivering a complete, production-ready prototype.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="intern-tools">
-                <span class="tool-chip">Python</span>
-                <span class="tool-chip">Pandas</span>
-                <span class="tool-chip">NumPy</span>
-                <span class="tool-chip">Scikit-learn</span>
-                <span class="tool-chip">Matplotlib</span>
-                <span class="tool-chip">Seaborn</span>
-                <span class="tool-chip">Flask</span>
-                <span class="tool-chip">GitHub</span>
-                <span class="tool-chip">EDA</span>
-                <span class="tool-chip">Model Evaluation</span>
-            </div>
-        </div>
-
-        <div class="exp-layout">
-            <div class="timeline reveal">
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-dot"></div>
-                        <div class="tl-line"></div>
-                    </div>
-                    <div class="tl-content card">
-                        <div class="tl-badge">Research</div>
-                        <h3>Researcher</h3>
-                        <div class="tl-org">E-Cell</div>
-                        <p>Conducting intensive research into entrepreneurial tech ventures and disruptive innovation models — bridging academic theory with startup execution.</p>
+                <div class="floating-card card-2">
+                    <div class="fc-icon">☁️</div>
+                    <div>
+                        <div class="fc-label">Cloud & IoT</div>
+                        <div class="fc-val">Projects Built</div>
                     </div>
                 </div>
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-dot"></div>
-                        <div class="tl-line"></div>
-                    </div>
-                    <div class="tl-content card">
-                        <div class="tl-badge achievement">🥈 Achievement</div>
-                        <h3>Runner-Up</h3>
-                        <div class="tl-org">PBL Competition</div>
-                        <p>Led a cross-functional engineering team through full project lifecycle — from ideation to final deployment — earning runner-up in a highly competitive PBL competition.</p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-dot"></div>
-                    </div>
-                    <div class="tl-content card">
-                        <div class="tl-badge">Innovation</div>
-                        <h3>Ideathon Innovator</h3>
-                        <div class="tl-org">Safety Tech Initiative</div>
-                        <p>Designed and pitched an offline tracking map system that maintains real-time position safety monitoring without any active network connectivity — targeting critical safety gaps.</p>
+                <div class="floating-card card-3">
+                    <div class="fc-icon">📱</div>
+                    <div>
+                        <div class="fc-label">Android & Backend</div>
+                        <div class="fc-val">Development Experience</div>
                     </div>
                 </div>
             </div>
-
-            <div class="exp-aside reveal-right">
-                <div class="card achievements-card">
-                    <h3>Achievements</h3>
-                    <ul class="achievement-list">
-                        <li>
-                            <span class="al-icon">💼</span>
-                            <span>Data Science Intern — NetLeap IT, Nashik</span>
-                        </li>
-                        <li>
-                            <span class="al-icon">🏆</span>
-                            <span>Runner-Up in PBL Competition</span>
-                        </li>
-                        <li>
-                            <span class="al-icon">🔬</span>
-                            <span>Active E-Cell Researcher</span>
-                        </li>
-                        <li>
-                            <span class="al-icon">💡</span>
-                            <span>Ideathon Participant — Safety Tech</span>
-                        </li>
-                        <li>
-                            <span class="al-icon">📱</span>
-                            <span>Published Android App on Firebase</span>
-                        </li>
-                        <li>
-                            <span class="al-icon">🧠</span>
-                            <span>ML & Cyber Defense Self-Learner</span>
-                        </li>
-                    </ul>
+            <div class="dev-terminal hero-terminal" id="hero-terminal" aria-label="Developer Mode Terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-title">developer-mode</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line comment">// Building intelligent systems</div>
+                    <div class="terminal-line empty"></div>
+                    <div class="terminal-line keyword">const</div> <span class="terminal-line variable">ramesh</span>
+                    <span class="terminal-line operator">=</span> <span class="terminal-line bracket">{</span>
+                    <div class="terminal-line indent"><span class="terminal-line property">name</span>: <span
+                            class="terminal-line string">"Ramesh Rathod"</span>,</div>
+                    <div class="terminal-line indent"><span class="terminal-line property">role</span>: <span
+                            class="terminal-line string">"ML & Data Science Enthusiast"</span>,</div>
+                    <div class="terminal-line indent"><span class="terminal-line property">focus</span>: <span
+                            class="terminal-line bracket">[</span><span class="terminal-line string">"ML"</span>, <span
+                            class="terminal-line string">"AI"</span>, <span class="terminal-line string">"Data
+                            Science"</span><span class="terminal-line bracket">]</span>,</div>
+                    <div class="terminal-line indent"><span class="terminal-line property">status</span>: <span
+                            class="terminal-line string">"Open to Internships"</span></div>
+                    <div class="terminal-line bracket">};</div>
+                    <div class="terminal-line empty"></div>
+                    <div class="terminal-line keyword">function</div> <span
+                        class="terminal-line function">buildFuture</span>() <span class="terminal-line bracket">{</span>
+                    <div class="terminal-line indent"><span class="terminal-line function">learn</span>();</div>
+                    <div class="terminal-line indent"><span class="terminal-line function">build</span>();</div>
+                    <div class="terminal-line indent"><span class="terminal-line function">innovate</span>();</div>
+                    <div class="terminal-line bracket">}</div>
+                    <div class="terminal-line empty"></div>
+                    <div class="terminal-line success">> System ready...</div>
+                    <div class="terminal-line success">> Building intelligent systems...</div>
+                    <div class="terminal-line prompt"><span class="terminal-prompt">>_</span></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section contact-section">
-    <div class="container">
-        <div class="contact-box card reveal">
-            <div class="contact-left">
-                <div class="section-label">05 — Contact</div>
-                <h2 class="section-heading">Let's build<br><span class="gradient-text">something great</span></h2>
-                <p class="contact-sub">Open to collaborations, internships, and interesting project ideas. My inbox is always open.</p>
-                <a href="mailto:iamrameshrathod01@gmail.com" class="btn btn-primary">Send a Message</a>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-label reveal">01 — About</div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2 class="section-heading">Computer Engineering Student<br><span class="gradient-text">focused on
+                            ML, Data Science & AI</span></h2>
+                    <p>I am a Computer Engineering student passionate about Machine Learning, Data Science, and
+                        Artificial Intelligence. I enjoy transforming data into meaningful insights and building
+                        practical systems that solve real-world problems.</p>
+                    <p>My projects span machine learning, data analysis, IoT, Android development, backend systems, and
+                        cloud technologies.</p>
+                </div>
+                <div class="about-card-col reveal-right">
+                    <div class="card glass-card">
+                        <h3>Currently</h3>
+                        <div class="currently-grid">
+                            <div class="currently-item">
+                                <div class="ci-icon">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="ci-text">
+                                    <div class="ci-label">Degree</div>
+                                    <div class="ci-value">Computer Engineering</div>
+                                </div>
+                            </div>
+                            <div class="currently-item">
+                                <div class="ci-icon">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="ci-text">
+                                    <div class="ci-label">Focus</div>
+                                    <div class="ci-value">Machine Learning, Data Science & AI</div>
+                                </div>
+                            </div>
+                            <div class="currently-item">
+                                <div class="ci-icon">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="1.8" />
+                                        <path d="M8 21h8M12 17v4" stroke-width="1.8" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="ci-text">
+                                    <div class="ci-label">Building</div>
+                                    <div class="ci-value">AI & Data-Driven Projects</div>
+                                </div>
+                            </div>
+                            <div class="currently-item">
+                                <div class="ci-icon">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" stroke-width="1.8" />
+                                        <path d="M12 8v4M12 16h.01" stroke-width="1.8" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="ci-text">
+                                    <div class="ci-label">Status</div>
+                                    <div class="ci-value ci-status">Open to Internships</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contact-right">
-                <div class="contact-links">
-                    <a href="assets/Ramesh_Rathod.pdf" class="contact-link" download>
-                        <div class="cl-icon">
-                            <svg fill="none" viewBox="0 0 24 24" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.8"/><polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="18" x2="12" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9" y1="15" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-label reveal">02 — Skills</div>
+            <h2 class="section-heading reveal">Technical <span class="gradient-text">Arsenal</span></h2>
+            <div class="bento-grid reveal">
+
+                <div class="bento-card card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                            <path d="M8 3L3 12l5 9M16 3l5 9-5 9M14 5l-4 14" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Python</span>
+                        <span class="skill-tag primary">Java</span>
+                        <span class="skill-tag primary">C++</span>
+                        <span class="skill-tag primary">SQL</span>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-large card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M12 3v9l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">Regression</span>
+                        <span class="skill-tag">Model Evaluation</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                    </div>
+                </div>
+
+                <div class="bento-card card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.8" />
+                        </svg>
+                    </div>
+                    <h3>Web / Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-wide card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Databases & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Firebase / Firestore</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-label reveal">03 — Projects</div>
+            <h2 class="section-heading reveal">Things I've <span class="gradient-text">Built</span></h2>
+            <div class="projects-grid">
+
+                <div class="project-card card reveal">
+                    <div class="pc-img">
+                        <img loading="lazy" src="assets/health_device.png" alt="EduPulse">
+                        <div class="pc-number">01</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-tags">
+                            <span class="pc-tag">Python</span>
+                            <span class="pc-tag">Pandas</span>
+                            <span class="pc-tag">Scikit-learn</span>
+                            <span class="pc-tag">Flask</span>
+                        </div>
+                        <h3 class="pc-title">EduPulse — Student Performance Prediction System</h3>
+                        <p class="pc-desc">An ML-based student performance prediction system that analyzes academic and
+                            behavioral features to predict final grades. Performed EDA, feature analysis, model
+                            comparison, evaluation, and deployed the selected model through a Flask web application.
+                            Decision Tree Regressor achieved approximately R² = 0.78.</p>
+                        <div class="pc-footer">
+                            <a href="https://github.com/darknightspi/EduPulse" target="_blank" rel="noopener noreferrer"
+                                class="pc-link">
+                                View on GitHub
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card reveal">
+                    <div class="pc-img">
+                        <img loading="lazy" src="assets/krishimind.png" alt="AgroDiamond">
+                        <div class="pc-number">02</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-tags">
+                            <span class="pc-tag">ESP32</span>
+                            <span class="pc-tag">IoT</span>
+                            <span class="pc-tag">Sensors</span>
+                            <span class="pc-tag">Cloud</span>
+                        </div>
+                        <h3 class="pc-title">AgroDiamond — AI/IoT Agriculture Solution</h3>
+                        <p class="pc-desc">Intelligent agriculture system for crop recommendation and plant environment
+                            monitoring. Uses ESP32 with temperature, humidity, and soil moisture sensors for automated
+                            irrigation control and real-time dashboard integration.</p>
+                        <div class="pc-footer">
+                            <a href="https://github.com/darknightspi/AgroDiamond" target="_blank"
+                                rel="noopener noreferrer" class="pc-link">
+                                View on GitHub
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card reveal">
+                    <div class="pc-img">
+                        <img loading="lazy" src="assets/edupulse.png" alt="Library Equipment Management">
+                        <div class="pc-number">03</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-tags">
+                            <span class="pc-tag">Java</span>
+                            <span class="pc-tag">Android</span>
+                            <span class="pc-tag">Firebase</span>
+                            <span class="pc-tag">Firestore</span>
+                        </div>
+                        <h3 class="pc-title">Library Equipment Management System</h3>
+                        <p class="pc-desc">An Android-based library equipment management system for organizing
+                            departments, libraries, equipment grids, equipment status, remarks, and statistics. Built
+                            with Firebase Firestore for real-time data sync and admin dashboard with equipment
+                            availability tracking.</p>
+                        <div class="pc-footer">
+                            <a href="https://github.com/darknightspi/LibraryEquipmentManagement" target="_blank"
+                                rel="noopener noreferrer" class="pc-link">
+                                View on GitHub
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card reveal">
+                    <div class="pc-img">
+                        <img loading="lazy" src="assets/event_registration.png" alt="Event Registration System">
+                        <div class="pc-number">04</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-tags">
+                            <span class="pc-tag">Node.js</span>
+                            <span class="pc-tag">Express.js</span>
+                            <span class="pc-tag">MongoDB</span>
+                            <span class="pc-tag">REST API</span>
+                        </div>
+                        <h3 class="pc-title">Event Registration System</h3>
+                        <p class="pc-desc">Backend-driven event registration system for managing college events,
+                            participants, and registrations with capacity enforcement, duplicate prevention, and
+                            complete CRUD operations. Built with Node.js, Express.js, and MongoDB Atlas.</p>
+                        <div class="pc-footer">
+                            <a href="https://github.com/darknightspi/Event-Registration-System" target="_blank"
+                                rel="noopener noreferrer" class="pc-link">
+                                View on GitHub
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-label reveal">04 — Experience</div>
+            <h2 class="section-heading reveal">What I've <span class="gradient-text">Done</span></h2>
+
+            <div class="internship-card card reveal">
+                <div class="intern-header">
+                    <div class="intern-org-badge">
+                        <div class="intern-org-logo">
+                            <img src="assets/logo2.webp" alt="NetLeap IT Training And Solutions logo" loading="lazy">
                         </div>
                         <div>
-                            <div class="cl-title">CV/Resume</div>
-                            <div class="cl-val">Download PDF</div>
+                            <div class="intern-org-name">NetLeap IT Training And Solutions</div>
+                            <div class="intern-org-type">IT Training & Solutions · Nashik, Maharashtra, India</div>
                         </div>
-                        <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="intern-meta">
+                        <span class="intern-badge">Data Science</span>
+                        <span class="intern-duration">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                                <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                            </svg>
+                            Dec 2025 – Feb 2026 · 3 Months
+                        </span>
+                        <span class="intern-location">
+                            <svg width="13" height="13" fill="none" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                    fill="currentColor" />
+                            </svg>
+                            On-site
+                        </span>
+                    </div>
+                </div>
+
+                <div class="intern-role">
+                    <h3>Data Science Intern</h3>
+                    <p class="intern-summary">Completed an on-site Data Science and Machine Learning internship —
+                        building a student performance prediction system from EDA through model selection, evaluation,
+                        and Flask deployment.</p>
+                </div>
+
+                <div class="project-spotlight">
+                    <div class="ps-label">Key Project</div>
+                    <div class="ps-title">EduPulse — Student Performance Prediction System</div>
+                    <div class="ps-metric">
+                        <div class="metric-card">
+                            <div class="metric-value">~0.78</div>
+                            <div class="metric-label">R² Score</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">Models Compared</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">Flask</div>
+                            <div class="metric-label">Web App</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intern-achievements">
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 20V10M12 20V4M6 20v-6" />
+                                <path d="M1 14h22" />
+                            </svg>
+                        </div>
+                        <h4 class="ach-title">Exploratory Data Analysis</h4>
+                        <p class="ach-desc">Analyzed and preprocessed student performance data to identify key academic
+                            and behavioral predictors.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 5v14M12 5a2 2 0 0 1 4 0v14a2 2 0 0 1-4 0M12 5a2 2 0 0 0-4 0v14a2 2 0 0 0 4 0" />
+                                <path d="M2 13h20" />
+                            </svg>
+                        </div>
+                        <h4 class="ach-title">Model Development</h4>
+                        <p class="ach-desc">Implemented and compared Linear Regression, Decision Tree Regressor, and
+                            Random Forest Regressor.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                        </div>
+                        <h4 class="ach-title">Model Evaluation</h4>
+                        <p class="ach-desc">Evaluated models using R², MAE, and RMSE, with Decision Tree Regressor
+                            achieving approximately R² = 0.78.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h4 class="ach-title">Deployment</h4>
+                        <p class="ach-desc">Deployed the trained model through a Flask web application for local
+                            demonstration.</p>
+                    </div>
+                </div>
+
+                <div class="intern-tech-stack">
+                    <div class="tech-label">TECH STACK</div>
+                    <div class="tech-chips">
+                        <span class="tech-chip">Python</span>
+                        <span class="tech-chip">Pandas</span>
+                        <span class="tech-chip">NumPy</span>
+                        <span class="tech-chip">Scikit-learn</span>
+                        <span class="tech-chip">Matplotlib</span>
+                        <span class="tech-chip">Seaborn</span>
+                        <span class="tech-chip">Joblib</span>
+                        <span class="tech-chip">Flask</span>
+                        <span class="tech-chip">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <div class="section-label reveal">05 — Achievements</div>
+            <h2 class="section-heading reveal">Recognition <span class="gradient-text">& Awards</span></h2>
+            <p class="section-sub reveal">Milestones that reflect my learning, projects, and achievements.</p>
+            <div class="achievements-grid">
+                <div class="ach-highlight-card card reveal">
+                    <div class="ach-highlight-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2" />
+                            <path d="M18 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2" />
+                            <path d="M10 18v-6M14 18v-2M18 18v-4" />
+                            <path d="M8 6v12" />
+                            <path d="M16 6v12" />
+                        </svg>
+                    </div>
+                    <div class="ach-highlight-badge runner-up">RUNNER-UP</div>
+                    <h3 class="ach-highlight-title">PBL Competition</h3>
+                    <p class="ach-highlight-desc">Led a cross-functional engineering team through the complete project
+                        lifecycle, from ideation to final deployment, earning runner-up for the Library Equipment
+                        Management System.</p>
+                    <a href="https://github.com/darknightspi/LibraryEquipmentManagement" target="_blank"
+                        rel="noopener noreferrer" class="ach-highlight-link">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <path d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                        Library Equipment Management System
                     </a>
-                    <a href="mailto:iamrameshrathod01@gmail.com" class="contact-link">
-                        <div class="cl-icon">
-                            <svg fill="none" viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8"/></svg>
-                        </div>
-                        <div>
-                            <div class="cl-title">Email</div>
-                            <div class="cl-val">iamrameshrathod01@gmail.com</div>
-                        </div>
-                        <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </a>
-                    <a href="https://github.com/darknightspi" target="_blank" class="contact-link">
-                        <div class="cl-icon">
-                            <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </div>
-                        <div>
-                            <div class="cl-title">GitHub</div>
-                            <div class="cl-val">@darknightspi</div>
-                        </div>
-                        <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/ramesh-rathod" target="_blank" class="contact-link">
-                        <div class="cl-icon">
-                            <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM3.56 20.45h3.56V9H3.56v11.45z"/></svg>
-                        </div>
-                        <div>
-                            <div class="cl-title">LinkedIn</div>
-                            <div class="cl-val">Connect with me</div>
-                        </div>
-                        <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="ach-highlight-card card reveal">
+                    <div class="ach-highlight-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <div class="ach-highlight-badge internship">INTERNSHIP</div>
+                    <h3 class="ach-highlight-title">Data Science Intern</h3>
+                    <p class="ach-highlight-desc">Completed an on-site Data Science and Machine Learning internship
+                        focused on exploratory data analysis, model development, evaluation, and Flask-based deployment.
+                    </p>
+                    <a href="https://github.com/darknightspi/EduPulse" target="_blank" rel="noopener noreferrer"
+                        class="ach-highlight-link">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <path d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                        NetLeap IT Training And Solutions · Nashik
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container footer-inner">
-        <div class="footer-logo"><span class="logo-bracket"><</span>RR<span class="logo-bracket">/></span></div>
-        <p>© 2025 Ramesh Rathod — Engineered with intentionality.</p>
-        <div class="footer-links">
-            <a href="https://github.com/darknightspi" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/ramesh-rathod" target="_blank">LinkedIn</a>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-box card reveal">
+                <!-- Light/Dark Mode Contact View -->
+                <div class="contact-view contact-view-lightdark">
+                    <div class="contact-left">
+                        <div class="section-label">06 — Contact</div>
+                        <h2 class="section-heading">Let's build<br><span class="gradient-text">something great</span>
+                        </h2>
+                        <p class="contact-sub">Open to collaborations, internships, and interesting project ideas. My
+                            inbox is always open.</p>
+                        <a href="mailto:iamrameshrathod01@gmail.com" class="btn btn-primary">Send a Message</a>
+                    </div>
+                    <div class="contact-right">
+                        <div class="contact-links">
+                            <a href="assets/Ramesh_Rathod.pdf" class="contact-link" download>
+                                <div class="cl-icon">
+                                    <svg fill="none" viewBox="0 0 24 24" width="22" height="22">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                            stroke="currentColor" stroke-width="1.8" />
+                                        <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="1.8" />
+                                        <line x1="12" y1="18" x2="12" y2="12" stroke="currentColor" stroke-width="1.8"
+                                            stroke-linecap="round" />
+                                        <line x1="9" y1="15" x2="15" y2="15" stroke="currentColor" stroke-width="1.8"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="cl-title">CV/Resume</div>
+                                    <div class="cl-val">Download PDF</div>
+                                </div>
+                                <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                            <a href="mailto:iamrameshrathod01@gmail.com" class="contact-link">
+                                <div class="cl-icon">
+                                    <svg fill="none" viewBox="0 0 24 24" width="22" height="22">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                            stroke="currentColor" stroke-width="1.8" />
+                                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="cl-title">Email</div>
+                                    <div class="cl-val">iamrameshrathod01@gmail.com</div>
+                                </div>
+                                <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/darknightspi" target="_blank" rel="noopener noreferrer"
+                                class="contact-link">
+                                <div class="cl-icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="cl-title">GitHub</div>
+                                    <div class="cl-val">@darknightspi</div>
+                                </div>
+                                <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rameshrathod01/" target="_blank"
+                                rel="noopener noreferrer" class="contact-link">
+                                <div class="cl-icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22">
+                                        <path
+                                            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM3.56 20.45h3.56V9H3.56v11.45z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="cl-title">LinkedIn</div>
+                                    <div class="cl-val">Connect with me</div>
+                                </div>
+                                <svg class="cl-arrow" fill="none" viewBox="0 0 24 24" width="18" height="18">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Mode Contact View -->
+                <div class="contact-view contact-view-dev" aria-label="Developer Mode Contact Interface">
+                    <div class="dev-terminal" id="dev-contact-terminal">
+                        <div class="dev-terminal-header">
+                            <div class="dev-terminal-dots">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot maximize"></span>
+                            </div>
+                            <div class="dev-terminal-title">contact.py</div>
+                        </div>
+                        <div class="dev-terminal-body" id="dev-terminal-body">
+                            <div class="dev-terminal-output" id="dev-terminal-output">
+                                <div class="terminal-line welcome">
+                                    <span class="text-muted">Python 3.x - Ramesh Contact Interface</span>
+                                </div>
+                                <div class="terminal-line welcome">
+                                    <span class="text-muted">Type 'help' to see available commands.</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">>>></span> <span class="command user-input">help</span>
+                                </div>
+                            </div>
+                            <div class="terminal-line input-line">
+                                <span class="prompt">>>></span>
+                                <div class="input-wrap">
+                                    <input type="text" class="terminal-input" id="dev-terminal-input" autocomplete="off"
+                                        spellcheck="false" aria-label="Terminal command input">
+                                    <span class="cursor" id="terminal-cursor">_</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dev-terminal-footer">
+                            <div class="terminal-hint">
+                                <kbd>Enter</kbd> Execute &nbsp;|&nbsp; <kbd>↑</kbd>/<kbd>↓</kbd> History &nbsp;|&nbsp;
+                                <kbd>Ctrl+L</kbd> Clear
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo"><span class="logo-bracket">
+                    << /span>RR<span class="logo-bracket">/></span></div>
+            <p>© 2025 Ramesh Rathod — Engineered with intentionality.</p>
+            <div class="footer-links">
+                <a href="https://github.com/darknightspi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/rameshrathod01/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
