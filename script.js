@@ -153,13 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active', btn.dataset.theme === theme);
         });
         updateParticles(theme);
-
-        if (theme === 'developer') {
-            const termInput = document.getElementById('dev-terminal-input');
-            if (termInput) {
-                setTimeout(() => termInput.focus(), 150);
-            }
-        }
     }
 
     function initTheme() {
@@ -397,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     addOutput('', '');
                     addOutput('Name     : Ramesh Rathod', 'contact-info');
                     addOutput('Focus    : ML / Data Science / AI', 'contact-info');
-                    addOutput('Status   : Open to Internships', 'contact-info');
+                    addOutput('Status   : Looking for Opportunities', 'contact-info');
                     addOutput('Location : India', 'contact-info');
                     addOutput('', '');
                     addOutput('Available channels:', 'contact-info');
@@ -512,12 +505,5 @@ document.addEventListener('DOMContentLoaded', () => {
             devCursor.style.opacity = devCursor.style.opacity === '0' ? '1' : '0';
         }, 530);
     }
-
-    // Auto-focus on load if developer mode is active
-    setTimeout(() => {
-        if (html.getAttribute('data-theme') === 'developer' && terminalInput) {
-            terminalInput.focus();
-        }
-    }, 150);
 
 });

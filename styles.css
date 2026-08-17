@@ -702,14 +702,15 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--green);
     background: rgba(22, 163, 74, 0.08);
-    padding: 0.3rem 0.85rem;
+    padding: 0.3rem 0.75rem;
     border-radius: 99px;
     border: 1px solid rgba(22, 163, 74, 0.15);
     width: fit-content;
+    white-space: nowrap;
 }
 
 .ci-status::before {
@@ -2075,8 +2076,9 @@ a {
 [data-theme="developer"] .dev-terminal {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    max-width: 480px;
+    height: auto;
+    min-height: 480px;
+    max-width: 490px;
     width: 100%;
 }
 
@@ -2084,7 +2086,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.25rem;
     background: var(--bg-2);
     border-bottom: 1px solid var(--border);
 }
@@ -2123,23 +2125,22 @@ a {
 }
 
 .terminal-body {
-    padding: 1.25rem;
+    padding: 1.5rem 1.6rem;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    line-height: 1.7;
+    font-size: 0.8rem;
+    line-height: 1.75;
     color: var(--text-2);
-    overflow-x: auto;
+    overflow: visible;
 }
 
 .terminal-line {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.25rem;
+    display: block;
     white-space: pre;
+    line-height: 1.6;
 }
 
 .terminal-line.empty {
-    height: 0.5rem;
+    height: 0.6rem;
 }
 
 .terminal-line.indent {
