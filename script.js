@@ -436,47 +436,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        function updateInputWidth() {
-            terminalInput.style.width = terminalInput.value.length + 'ch';
-        }
-
-        terminalInput.addEventListener('input', updateInputWidth);
-
         // Terminal input handling
         terminalInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
+            if (e.key === 'Enter' || e.keyCode === 13) {
                 e.preventDefault();
                 const command = terminalInput.value;
                 terminalInput.value = '';
-                updateInputWidth();
                 executeCommand(command);
             } else if (e.key === 'ArrowUp') {
                 e.preventDefault();
                 if (commandHistory.length > 0 && historyIndex > 0) {
                     historyIndex--;
                     terminalInput.value = commandHistory[historyIndex];
-                    updateInputWidth();
                 }
             } else if (e.key === 'ArrowDown') {
                 e.preventDefault();
                 if (historyIndex < commandHistory.length - 1) {
                     historyIndex++;
                     terminalInput.value = commandHistory[historyIndex] || '';
-                    updateInputWidth();
                 } else {
                     historyIndex = commandHistory.length;
                     terminalInput.value = '';
-                    updateInputWidth();
                 }
             } else if (e.key === 'l' && (e.ctrlKey || e.metaKey)) {
                 e.preventDefault();
                 terminalInput.value = '';
-                updateInputWidth();
                 executeCommand('clear');
             }
         });
-
-        updateInputWidth();
 
         // Focus input on click
         terminalInput.addEventListener('click', (e) => {
